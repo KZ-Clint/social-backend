@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -71,33 +71,108 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+body {
+  padding: 0 ;
   margin: 0;
+  /* line-height: 0; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 a {
+  font-family: 'Inter';
   color: inherit;
   text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+* {
+  padding: 0 ;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#theme:checked ~ .app{
+  filter: invert(0.8)
+}
+.app{
+  max-width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+.main{
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+.img{
+  object-fit: cover;
+}
+.super-avatar{
+  width: 150px;
+  height: 150px; 
+  border-radius: 50%;
+}
+.big-avatar{
+  width: 50px;
+  height: 50px; 
+  border-radius: 50%;
+}
+.medium-avatar{
+  width: 30px;
+  height: 30px; 
+  border-radius: 50%;
+}
+.small-avatar{
+   width: 20px;
+   height: 20px; 
+   border-radius: 50%;
+}
+.mode{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+@media screen and (max-width:768px) { 
+
+  .header .menu{
+      position: absolute;
+      top: calc(100vh - 50px);
+      left: 0;
+      width: 100%;
+      height: 50px;
+      box-shadow: 0 0 10px #ddd;
+      z-index: 2;
+      background: #f8f9fa;
+      border: 1px solid rgb(0, 0, 0, .125);
+  }
+  .header .menu .navbar-nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .header .menu .dropdown-menu{
+      bottom: 100%;
+      top: auto;
+  }
+  .header .search_form{
+      width: 100%;
+  }
+  .header .logo{
+      margin: auto;
+      font-size: 1rem;
+  }
+  .header .logo h1{
+      font-size: 1.5rem;
+  }
+  .wrap_page{
+     margin-bottom: 60px;
+  }
+  
 }
 
 @media (prefers-color-scheme: dark) {
